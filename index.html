@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- La etiqueta link sirve para 
+        vincular el archivo html 
+        con el archivo de estilos -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">  
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale clae=1.0">
+    <title>Taller de Prorgamación</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section class="header" id="inicio">
+        <div class="contenedor">
+            <div class="texto_cabecera">
+                <h1 id="titulo">Brazo Robótico</h1>
+                <p id="titulo">Les presentamos el proyecto de Brazo Robótico realizado en conjunto 
+                    con el taller de Tecnología y Control y Programación.</p>
+            </div>
+            <button onclick="location.href='#seccion_proyecto'" class="boton_cabecera">Ver Proyecto</button>
+
+        </div>
+</section>
+    <section class="proyecto" id="seccion_proyecto">
+        <!-- Columna uno -->
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R82cqi4JLV8?start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+        </div>
+        <!-- Columna dos -->
+        <div>
+            <h2>Relevamiento del Proyecto</h2>
+        </div>
+
+        
+</section>
+<section class="imagenes" id="imagenes">
+
+    <div id="slider">
+        <figure>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg" alt>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/taj-mahal_copy.jpg" alt>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ibiza.jpg" alt>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ankor-wat.jpg" alt>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/austin-fireworks.jpg" alt>
+        </figure>
+    </div>
+</section>
+<section class="contacto" id="contacto">
+    <div class="container">
+    <form id="contact" action="" method="post">
+        <h3>Contacto</h3>
+        <h4>Escribime para cualquier duda del proyecto</h4>
+        <fieldset>
+          <input placeholder="Escribime tu nombre" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Ingresa tu email" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Ingresá tu numero de telefono (opcional)" type="tel" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Tu sitio web (opcional)" type="url" tabindex="4" required>
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Escribime tu mensaje" tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+        </fieldset>
+      </form>
+    </div>
+</section>
+    <div class="menuLateral" id="sideNav">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#seccion_proyecto">Proyecto</a></li>
+            <li><a href="#imagenes">Imagenes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+    <img src="./img/icono.png" id="menuBtn">
+
+
+ <script>
+        let menuBtn = document.getElementById("menuBtn");
+        let sideNav = document.getElementById("sideNav");
+        let titulo = document.getElementById("titulo");
+        sideNav.style.bottom = "-1000px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.bottom == "-1000px"){
+                sideNav.style.bottom = "0";
+                sideNav.style.transition="all 0.5s ease";
+                sideNav.style.backgroundColor = "red";
+
+            }else{
+                sideNav.style.bottom = "-1000px";
+                sideNav.style.backgroundColor = "cornflowerblue";
+            }
+        }
+
+        
+    </script>
+
+</body>
+</html>
+
+<!-- 
+        <h2>Relevamiento del Proyecto</h2>
+        <p>El video te muestra el paso a paso de cómo armar un brazo hidraúlico de una manera económica y sencilla.</p>
+        <p>Lo utilizamos como guía para el armado de nuestro proyecto el cual se basa en la construcción de un brazo hidraúlico controlado con un sistema Arduino.</p>
+    </div>
+
+</section> -->
